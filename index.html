@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>NEURO SWARM · MAX</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">🏟️ NEURO SWARM · MAX</div>
+  <div class="stats">
+    <div class="stat"><span>Монеты</span><b id="s-coins">0</b></div>
+    <div class="stat"><span>Побед</span><b id="s-wins">0</b></div>
+  </div>
+  <div class="controls">
+    <select id="boss-select">
+      <option value="awakened">👾 Пробуждённый</option>
+      <option value="sans">💀 Санс</option>
+      <option value="rumbling_knight">⚔️ Рокочущий Рыцарь</option>
+      <option value="dark_lord">🖤 Тёмный Лорд</option>
+      <option value="victim">🔥 Жертва</option>
+      <option value="devil">😈 Дьявол</option>
+      <option value="portal">🌀 Хозяин Порталов</option>
+      <option value="delirium">🌀 Делириум</option>
+    </select>
+    <button id="btn-start" style="border-color:#88ff88;color:#88ff88;">▶ ЗАПУСТИТЬ БОЙ</button>
+    <button id="btn-stop" style="border-color:#ff2266;color:#ff2266;">⏹ СТОП</button>
+    <button id="btn-shop" style="border-color:#ffd700;color:#ffd700;">🛒 МАГАЗИН</button>
+  </div>
+</header>
+<main>
+  <section class="boss-wrap" id="boss-wrap">
+    <canvas id="boss-canvas" width="800" height="600"></canvas>
+  </section>
+</main>
+<div id="shop-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center;">
+  <div style="background:rgba(20,8,40,0.98); border:2px solid #ffd700; border-radius:16px; padding:30px; max-width:600px; width:90%; color:#f0e8ff;">
+    <h2 style="color:#ffd700; margin-bottom:20px; text-align:center;">🛒 МАГАЗИН АПГРЕЙДОВ</h2>
+    <div id="shop-items" style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;"></div>
+    <button id="btn-close-shop" style="width:100%; padding:12px; background:#ff4f8a; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:700;">ЗАКРЫТЬ</button>
+  </div>
+</div>
+<script src="js/utils.js"></script>
+<script src="js/config.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/player-boss.js"></script>
+<script src="js/bot.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
